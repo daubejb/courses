@@ -1,0 +1,55 @@
+= Getting Started with Cloud Native Go
+by: Mario Leander Reimer
+on: LinkedIn Learning
+released: Dec 19, 2017
+
+== Introduction
+
+=== Motivation for cloud native apps
+
+Cloud Native applications:: are applications that are designed for and take full advantage of the uniqueness of the cloud.  They are dynamic, won't break, and scale arbitrarily
+
+1. Hyperscale - increased traffic, data, and application features
+2. Antifragility - applications that do not break
+3. Continuous delivery and devops
+4. Opex savings (automation and utilization)
+
+=== Three key principles of Cloud native applications
+
+1. Built and composed as microservices
+2. Packaged and distributed in containers
+3. Dynamically executed in the cloud
+
+=== Challenges and Design principles of CNAD
+
+Design for:
+
+1. Performance: Responsive, concurrency, efficiency
+2. Automation: Automate dev tasks and ops tasks 
+3. Resiliency: Fault tolerant and self healing
+4. Elasticity: Dynamically scale up and down and be reactive
+5. Delivery: Short round trips and automated delivery
+6. Diagnosability: Cluster-wide logs, traces, and metrics
+
+=== Decomposition with Microservices
+
+The anatomy of an Ops Component:
+
+Constraints (mostly technology driven):
+- Application does not use kernel space APIs
+- Does not listen on random ports
+- Does not require an exotic os
+- Used endpoints can be configured (DNS name, IPs, Ports)
+
+Container (Application)  has internet protocol interface, a starting interface, a diagnosis interface, and an internet protocol
+
+=== The Cloud Native Stack
+
+
+- App Platform - Provides runtime environment and APIs for applications
+
+Cluster Operating System:
+
+- Cluster Orchestrator - Dynamically executes applications on the cluster
+- Cluster Scheduelr - Manages cluster resources and executes containers
+- Cluster Virtualization - Decouples resources from physical hardware
