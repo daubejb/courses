@@ -14,7 +14,7 @@ func TestBookToJSON(t *testing.T) {
 	want := `{"title":"Cloud Native Go","author":"M,-L. Reimer","isbn":"0123456789"}`
 
 	if got != want {
-		t.Errorf("got\n%q\nwant\n%q\n --- Book JSON marshalling wrong.", got, want)
+		t.Errorf("got\n%q\nwant\n%q\n --- Book JSON marshaling wrong.", got, want)
 	}
 }
 
