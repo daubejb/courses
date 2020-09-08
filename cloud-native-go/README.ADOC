@@ -51,5 +51,28 @@ Container (Application)  has internet protocol interface, a starting interface, 
 Cluster Operating System:
 
 - Cluster Orchestrator - Dynamically executes applications on the cluster
-- Cluster Scheduelr - Manages cluster resources and executes containers
+- Cluster Scheduler - Manages cluster resources and executes containers
 - Cluster Virtualization - Decouples resources from physical hardware
+
+=== Basic Docker workflow and Docker commands
+
+docker build -t <tag> .:: Build a docker image with the given tag from the current directory
+docker images:: Prints all local images
+docker run:: Run a Docker image:  Creates and runs a container
+-d:: in background
+-e <environment variable>:: with defined ENV variable
+-p <host-port>:<container-port>:: with port forwarding from Host to Container
+<image> <entrypoint process:: image name and entrypoint process
+
+docker run -ti <image> /bin/sh:: Run a Docker image and open a shell wihtin the container / with forwarding of local terminal / image name and shell
+
+docker ps --all:: Prints all containers(without --all prints only running containers)
+docker kill <container>:: Terminate container (send SIGKILL to entrypoint process)
+docker rm <container>:: Remove container
+docker rmi -f <image>:: Remove local image (use -f to force removal)
+
+=== Build naive Docker image for Go microservice
+
+=== Running containerized Go microservice locally
+
+=== Improving Docker image and Docker compose

@@ -20,7 +20,7 @@ func TestBookToJSON(t *testing.T) {
 
 func TestBookFromJSON(t *testing.T) {
 	json := []byte(`{"title":"Cloud Native Go","author":"M,-L. Reimer","isbn":"0123456789"}`)
-	got := FromJson(json)
+	got := FromJSON(json)
 
 	want := Book{Title: "Cloud Native Go", Author: "M,-L. Reimer", ISBN: "0123456789"}
 
