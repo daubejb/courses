@@ -16,8 +16,8 @@ func SayHello() string {
 const fyal = "problems.csv"
 
 var quiz struct {
-	questions  int
-	numCorrect int
+	questions  float64
+	numCorrect float64
 }
 
 func main() {
@@ -40,12 +40,12 @@ func main() {
 
 		// evaluate the answer
 		if answer == correctAnswer {
-			quiz.numCorrect += 1
+			quiz.numCorrect += 1.00
 		}
-		quiz.questions += 1
+		quiz.questions += 1.00
 	}
-
-	fmt.Printf("You got %v correct out of %v questions.", quiz.numCorrect, quiz.questions)
+	var percentCorrect float64 = quiz.numCorrect / quiz.questions * 100.00
+	fmt.Printf("You got %v correct out of %v questions. %.2f %%", quiz.numCorrect, quiz.questions, percentCorrect)
 
 }
 
