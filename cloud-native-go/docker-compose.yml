@@ -1,0 +1,9 @@
+version: '2'
+service:
+	microservice:
+		build: .
+		image: cloud-native-go:1.0.1-alpine
+		environment:
+			- PORT=8080
+		ports:
+			- "8080:8080"
