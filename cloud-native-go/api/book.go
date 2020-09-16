@@ -98,7 +98,7 @@ func (b Book) ToJSON() []byte {
 	return ToJSON
 }
 
-// FromJSON to be used for unmarshalling of Book type
+// FromJSON to be used for unmarshaling of Book type
 func FromJSON(data []byte) Book {
 	book := Book{}
 	err := json.Unmarshal(data, &book)
